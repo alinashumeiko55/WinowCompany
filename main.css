@@ -284,3 +284,55 @@ max-width: 100vw;
     position:relative;
 	top:1px;
 }
+.staff-info-wrapper{
+    padding-top: 20px;
+    min-height: 75vh;
+    max-width: 75vw;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.staff-wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3,1fr);
+    grid-gap: 10px;
+    min-width: 35vw;
+    border-right: 1px outset rgba(0, 0, 0, 0.295);
+}
+.staff-element{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: 2fr;
+    align-items: center;
+}
+.staff-info{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3,1fr);
+    grid-gap: 20px;
+}
+.staff-img img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+.staff-famaly{
+    font-size: 20px;
+}
+.staff-famaly::before{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    content: 'ФИО: ';
+    color: red;
+}
+.staff-mail{
+    color: rgb(255, 140, 46);
+    font-size: 20px;
+    text-decoration: none;
+}
+.staff-mail::before{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    content: 'Почта: ';
+    color: red;
+}
