@@ -1,0 +1,175 @@
+body{
+    counter-reset: heading 1994; /* Инициируем счетчик */
+    margin: 0 auto;
+    scroll-behavior: smooth;
+}
+/****Header section****/
+.header-wrapper{
+    margin: 0 auto;
+    max-width: 65vw;
+    max-height: 120px;
+}
+.header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+}
+.header-wrapper .logo{
+    display: grid;
+    grid-template-columns: 0.1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+}
+.header-wrapper .logo h1{
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 30px;
+    letter-spacing: -2.2px;
+    word-spacing: 1px;
+    color: #000000;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+.header-wrapper .logo img{
+    width: 60px;
+    height: 60px;
+}
+.header-phone{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    text-align: end;
+    align-items: center;
+    padding-right: 100px;
+}
+.header-phone span{
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 20px;
+    letter-spacing: -2.2px;
+    word-spacing: 1px;
+    color: #000000;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+}
+.header-phone .phone-call{
+    position: relative;
+    display: inline;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 18px;
+    letter-spacing: -2.2px;
+    word-spacing: 1px;
+    color: rgb(77, 133, 255);
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+}
+.phone-call::before{
+    position: absolute;
+    left:-30px;
+    content: "";
+    min-width: 20px;
+    min-height: 20px;
+    background-image: url('./../../components/img/phone-icon.png');
+    background-size: cover;
+}
+/****Nav section****/
+.nav-bar-wrapper{
+    max-width: 100vw;
+    background-color: rgba(0, 0, 0, 0.664);
+}
+.nav-bar{
+    max-width: 600px;
+    min-height: 50px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    text-align: center;
+    align-items: center;
+}
+.nav-bar-item{
+    padding: 11px;
+    color: white;
+    text-decoration: none;
+}
+.nav-bar-item:hover{
+    color: rgb(255, 140, 46);
+    background-color: rgba(0, 0, 0, 0.548);
+    transition: all .3s ease;
+}
+.nav-bar a:nth-child(2){
+    background-color:  rgba(255, 140, 46, 0.76);
+}
+.nav-bar a:nth-child(2):hover{
+    color: white;
+    background-color:  rgba(255, 140, 46, 0.76);
+}
+/****SideNav section****/
+.side-bar{
+    max-width: 65vw;
+    margin: 0 auto;
+    padding: 20px 20px;
+    max-height: 120px; 
+}
+.side-bar a{
+    position: relative;
+    margin: 0 5px 0 0;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+.side-bar a:nth-child(2)::before{
+    left: -8px;
+    position: absolute;
+    content: " - ";
+}
+.side-bar a:hover{
+    color: rgb(255, 140, 46);
+    transition: all .5s ease;
+}
+/****About Section***/
+.about-info{
+    max-width: 65vw;
+    margin: 0 auto;
+}
+.about-info p:nth-last-child(4){
+    font-size: 20px;
+}
+.about-info p:nth-last-child(3){
+    font-size: 17px;
+    font-style: italic;
+}
+.about-info-img{
+    text-align: center;
+}
+.about-info-img img{
+    margin: 0 auto;
+    width: 1000px;
+}
+.history-wrapper li{
+    margin: 8px;
+    list-style-type: none;
+    font-size: 18px;
+}
+.history-wrapper .count::before{
+    counter-increment: heading; /* Указываем идентификатор счетчика */
+    content: counter(heading); /* Выводим текст перед содержимым тега <h2> */
+}
+/****Footer Section***/
+.footer-wrapper{
+    position: absolute;
+    min-height: 10vh;
+    background-color: rgba(0, 0, 0, 0.664);
+    min-width: 99vw;
+    left: 0;
+}
+
+
+

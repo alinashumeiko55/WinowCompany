@@ -100,10 +100,10 @@ body{
     background-color: rgba(0, 0, 0, 0.548);
     transition: all .3s ease;
 }
-.nav-bar a:nth-child(3){
+.nav-bar a:nth-child(4){
     background-color:  rgba(255, 140, 46, 0.76);
 }
-.nav-bar a:nth-child(3):hover{
+.nav-bar a:nth-child(4):hover{
     color: white;
     background-color:  rgba(255, 140, 46, 0.76);
 }
@@ -133,42 +133,53 @@ body{
     color: rgb(255, 140, 46);
     transition: all .5s ease;
 }
-/****Product Section***/
-.products-wrapper{
-    padding-top: 20px;
+/****About Section***/
+.partners-wrapper{
     max-width: 65vw;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(4,1fr);
-    grid-gap: 20px;
-    text-align: center;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: max-content;
+    grid-gap: 40px;
+    padding: 40px 0 69px 0;
 }
-.product{
-    max-width: 30vw;
-    padding: 10px;
-}
-.product img{
-    width: 388px;
-    height: 350px;
-}
-.product span{
-    padding: 5px;
-}
-.product a {
-    color: rgb(255, 140, 46);
-    padding-bottom: 10px;
-    margin: 5px;
-    font-size: 20px;
-    padding: 5px;
-    text-decoration: none;
-}
-.product a:hover{
+.partner-element {
+    display: block;
+    border: 1px solid black;
     position: relative;
-    color: rgb(255, 94, 0);
-    transition: all .3s ease;
-    bottom: 2px;
+    height: 11vw;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10%;
 }
+.partner-element:hover::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-radius: 10%;
+    background-color: rgba(0, 0, 0, 0.897);
+}
+.partner-element:hover .partner-info{
+    display: inline-block;
+}
+.partner-info{
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    top: 40%;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
 /****Footer Section***/
 .footer-wrapper{
     position: absolute;
