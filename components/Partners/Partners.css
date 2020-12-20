@@ -181,9 +181,17 @@ body{
 }
 /****Footer Section***/
 .footer-wrapper{
-    position: absolute;
+    padding-top: 40px;
     min-height: 10vh;
     background-color: rgba(0, 0, 0, 0.664);
     min-width: 99vw;
     left: 0;
+    text-align: center;
+}
+.footer-wrapper a{
+    margin: 0 -10px;
+    padding: 30px;
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
